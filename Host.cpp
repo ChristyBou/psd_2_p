@@ -20,36 +20,7 @@ void greeting()
          << endl;
 }
 
-void takeOrder()
+void sendToOrder()
 {
-    cout << "Taking order..." << endl;
-
-    // Handle order logic here, e.g., get items from the user
-    bool finishedOrdering = false;
-    while (!finishedOrdering)
-    {
-        showMenu();
-        int orderNum;
-        // cin.getline(orderNum);
-        switch (orderNum)
-        {
-        case 1:
-            // black coffee
-            // Ask for sugar
-            // Create a corresponding order with this info
-
-        case 2:
-            // white coffee
-
-        case 5:
-            finishedOrdering = false;
-        }
-    }
-
-    vector<string> items = {"item1", "item2", "item3"};
-    Manager::handleOrder(items);
-}
-
-void showMenu()
-{
+    Order *order = order->takeOrder();
 }
