@@ -4,14 +4,21 @@
 
 #include "Manager.h"
 
-class Host {
+class Host
+{
 protected:
     Manager manager;
 
-public:
-    Host() {}
+private:
+    Manager &manager;
+    Order &order;
 
-    void takeOrder();
+public:
+    // Host() {}
+    void greeting();
+    void sendToOrder();
+    void sendOrderToManager();
+    void serverOrder();
 };
 
-#endif //PSD_A1_24_HOST_H
+#endif // PSD_A1_24_HOST_H

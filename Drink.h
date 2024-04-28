@@ -5,11 +5,15 @@
 #ifndef PSD_A1_24_DRINK_H
 #define PSD_A1_24_DRINK_H
 
-class Drink {
-
+class Drink
+{
+public:
+    virtual ~Drink() = default;
+    virtual void addDrink() = 0;
 };
 
-class CoffeeMaker {
-
+class CoffeeMaker
+{
+    // No make coffee method
 };
-#endif //PSD_A1_24_DRINK_H
+#endif // PSD_A1_24_DRINK_H

@@ -5,6 +5,18 @@
 #ifndef PSD_A1_24_ORDER_H
 #define PSD_A1_24_ORDER_H
 
-class Order {};
+class Order
+{
+private:
+    Host &host;
+    Manager &manager;
 
-#endif //PSD_A1_24_ORDER_H
+    vector<string> foodItems;
+    vector<pair<string, int>> drinkItems;
+
+public:
+    Order(Host &host, Manager &manager) : host(host), manager(manager){};
+    void takeOrder();
+};
+
+#endif // PSD_A1_24_ORDER_H

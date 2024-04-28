@@ -11,6 +11,10 @@
 #include "Order.h"
 #include "Food.h"
 
-class Manager {};
+class Manager
+{
+public:
+    static void handleOrder(vector<string> items);
+};
 
-#endif //PSD_A1_24_MANAGER_H
+#endif // PSD_A1_24_MANAGER_H
