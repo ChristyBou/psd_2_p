@@ -5,6 +5,7 @@
 
 #include "Host.h"
 #include "Manager.h"
+#include "Order.h"
 
 using namespace std;
 
@@ -23,22 +24,33 @@ void takeOrder()
         {
         case 1:
             // black coffee
+
             // Ask for sugar
+            int sugar = 0;
+            // cin.getline(sugar);
+
+            drinkItems.first.push_back("Black");
+            drinkItems.second.push_back(sugar);
             // Add a drinkItem to the order class vector
 
         case 2:
             // white coffee
 
         case 3:
-            // Chips
+            // Pie
             // Add to foodItem order class vector
+            foodItems.push_back("Pie");
+
+        case 4:
+            // Chips
+            foodItems.push_back("Chips");
         case 5:
             finishedOrdering = false;
         }
     }
 
-    vector<string> items = {"item1", "item2", "item3"};
-    Manager::handleOrder(items);
+    // Create an order item to pass through?
+    // Manager::handleOrder();
 }
 
 void showMenu()

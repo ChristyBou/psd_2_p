@@ -9,28 +9,48 @@
 
 using namespace std;
 
-class Manager
+// These are no makeCoffee, getName and makeFood methods
+static void handleOrder(Order order)
 {
-public:
-    Manager(Host &host, Order &order){};
-    // These are no makeCoffee, getName and makeFood methods
-    static void handleOrder(const vector<string> items)
+    // if (!order.foodItems.empty())
+    // {
+    //     // Do food stuff
+    //     for (const auto item : order.foodItems)
+    //     {
+    //     }
+    // }
+
+    if (!order.drinkItems.empty())
     {
-        for (const auto item : items)
+        // Do drink stuff
+        for (const auto &item : order.drinkItems)
         {
-            //
-            if (item == "Black" || item == "White")
+            if (item.first == "Black")
             {
-                CoffeeMaker *coffee = coffee->makeCoffee(item);
-                cout << "Prepared " << coffee->getName() << endl;
-                delete coffee;
+                std::unique_ptr coffee = CoffeeMaker::addBlackCoffee(item.second);
             }
-            else
+            else if (item.first == "White")
             {
-                Food *food = food->makeFood(item);
-                cout << "Prepared " << food->getName() << endl;
-                delete food;
+                std::unique_ptr coffee = CoffeeMaker::addWhiteCoffee(item.second);
+                // Add coffee to finilisedDrinkItems
             }
         }
     }
-};
+
+    if (!order.foodItems.empty())
+    {
+        // Do drink stuff
+        for (const auto &item : order.foodItems)
+        {
+            if (item == "Pie")
+            {
+                std::unique_ptr pie = FoodMaker::addPie();
+                // Add pie to finilisedFoodItems
+            }
+            else if (item == "Chips")
+            {
+                std::unique_ptr pie = FoodMaker::addChips();
+            }
+        }
+    }
+}

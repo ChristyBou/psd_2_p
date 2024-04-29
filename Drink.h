@@ -15,5 +15,8 @@ public:
 class CoffeeMaker
 {
     // No make coffee method
+public:
+    static unique_ptr<Drink> addBlackCoffee(int sugar);
+    static unique_ptr<Drink> addWhiteCoffee(int sugar);
 };
 #endif // PSD_A1_24_DRINK_H

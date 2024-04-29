@@ -14,7 +14,7 @@
 class Manager
 {
 public:
-    static void handleOrder(vector<string> items);
+    static void handleOrder(Order order);
 };
 
 #endif // PSD_A1_24_MANAGER_H

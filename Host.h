@@ -6,15 +6,13 @@
 
 class Host
 {
-protected:
-    Manager manager;
-
-private:
-    Manager &manager;
-    Order &order;
+    Manager man;
+    Order ord;
+    Drink &drk;
+    Food &fod;
 
 public:
-    // Host() {}
+    Host(Manager manager, Order order, Drink &drink, Food &food);
     void greeting();
     void sendToOrder();
     void sendOrderToManager();
