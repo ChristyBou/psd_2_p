@@ -14,4 +14,16 @@ add_executable(PSD_A1_24 main.cpp
         Food.h
         Drink.cpp
         Drink.h
+        Host.cpp
+        Order.cpp
+        Manager.cpp
+        Host.cpp
+        Order.cpp
+        Host.cpp
+        Manager.cpp
+        Host.cpp
+        Order.cpp
+        Order.cpp
+        Host.cpp
+        Host.cpp
 )

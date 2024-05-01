@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/cuske/CLionProjects/PSD_A1_24
+# Install script for directory: C:/Users/cuske/OneDrive/Documents/GitHub/psd_2_p
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/cuske/CLionProjects/PSD_A1_24/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/cuske/OneDrive/Documents/GitHub/psd_2_p/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
